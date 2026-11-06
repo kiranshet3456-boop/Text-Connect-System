@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text-Connect System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        .container {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+        h2 { color: #333; margin-bottom: 20px; }
+        label { font-weight: bold; color: #555; }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0 20px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            width: 100%;
+            background-color: #2b7a78;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover { background-color: #1a504f; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Text-Connect Interface</h2>
+    <form action="/submit-message" method="POST">
+        <label for="sender">Your Name / ID:</label>
+        <input type="text" id="sender" name="sender" placeholder="Enter name..." required>
+
+        <label for="message">Message Text:</label>
+        <textarea id="message" name="message" rows="5" placeholder="Type your text message here..." required></textarea>
+
+        <button type="submit">Send to Database</button>
+    </form>
+</div>
+
+</body>
+</html>
